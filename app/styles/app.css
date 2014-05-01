@@ -1,0 +1,10 @@
+@import url('/assets/bootstrap.css');
+
+.table tr {
+  cursor: pointer;
+  border-left: 1px solid transparent;
+}
+
+.table tbody tr:last-of-type td {
+  border-bottom: 1px solid #ddd;
+}
