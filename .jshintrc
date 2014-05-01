@@ -10,7 +10,9 @@
     "$": true,
     "ENV": true,
     "module": true,
-    "console": true
+    "console": true,
+    "require": true,
+    "requireModule": true
   },
   "node" : false,
   "browser" : false,
