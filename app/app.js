@@ -110,6 +110,16 @@ new Pretender(function(){
       conversations: conversations
     });
   });
+
+  this.post('/compose', function(req){
+    var message = JSON.parse(req.requestBody);
+    return response({
+      id: conversationGuid++,
+      messages: [
+        generateMessage(message.subject, "ross@scienceexchange.com", message.to, message.body)
+      ]
+    });
+  });
 });
 
 var conversationGuid = 1;

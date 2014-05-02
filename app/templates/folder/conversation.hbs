@@ -1,0 +1,31 @@
+<div class="row">
+  {{!-- "pressed" is kind of between a DOM event method and semantic name - basically its something defined in the domain of your component. --}}
+  {{#bootstrap-button pressed="goBack"}}
+    <span class="glyphicon glyphicon-arrow-left"></span>
+  {{/bootstrap-button}}
+  {{#bootstrap-button pressed="moveTo" pressedArg="archive"}}
+    <span class="glyphicon glyphicon-inbox"></span>
+  {{/bootstrap-button}}
+  <button type="button" class="btn btn-default">
+    <span class="glyphicon glyphicon-exclamation-sign"></span>
+  </button>
+  <button type="button" class="btn btn-default">
+    <span class="glyphicon glyphicon-trash"></span>
+  </button>
+
+  <div class="btn-group">
+    {{#bootstrap-dropdown}}
+      {{#each folders}}
+        <li><a href="#" {{action "moveTo"}}>{{name}}</a></li>
+      {{/each}}
+    {{/bootstrap-dropdown}}
+  </div>
+
+</div>
+<div class="row">
+  {{#each messages}}
+    <h1>{{subject}}</h1>
+    <h2>From: {{from}}</h2>
+    <p>{{body}}</p>
+  {{/each}}
+</div>

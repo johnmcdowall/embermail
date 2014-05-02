@@ -9,10 +9,12 @@
 
     {{BASE_TAG}}
 
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="assets/app.css">
   </head>
   <body>
     <script src="assets/app.js"></script>
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
     <script>
       window.ENV = {{ENV}};
       window.Embermail = require('embermail/app')['default'].create(ENV.APP);

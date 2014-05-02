@@ -1,27 +1,27 @@
-// import { moduleFor, test } from "ember-qunit";
+import { moduleFor, test } from "ember-qunit";
 
-// moduleFor('route:folder');
+moduleFor('route:folder');
 
-// test('model hook', function() {
-//   expect(4);
+test('model hook', function() {
+  expect(4);
 
-//   var route = this.subject(),
-//       params = {folder_id: 'inbox'},
-//       model = route.model(params);
+  var route = this.subject(),
+      params = {folder_id: 'inbox'},
+      model = route.model(params);
 
-//   ok(model, "Model was returned");
-//   ok(model && typeof model.then === 'function', "Model hook returned a thenable");
+  ok(model, "Model was returned");
+  ok(model && typeof model.then === 'function', "Model hook returned a thenable");
 
-//   stop();
+  stop();
 
-//   model.then(function(json) {
-//     start();
+  model.then(function(json) {
+    start();
 
-//     ok(json, "Data was returned from the API");
-//     equal(json.id, 'inbox');
-//   }, function() {
-//     start();
+    ok(json, "Data was returned from the API");
+    equal(json.id, 'inbox');
+  }, function() {
+    start();
 
-//     ok(false, "The API call errored out");
-//   });
-// });
+    ok(false, "The API call errored out");
+  });
+});

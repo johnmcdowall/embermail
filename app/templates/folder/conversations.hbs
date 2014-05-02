@@ -1,0 +1,18 @@
+{{!--
+  Ember knows when thenable ("promise") is done returning.
+  This == the model.  NOTE: Don't use the "model" or "content" keywoard.
+--}}
+
+<table class="table">
+  <tbody>
+  {{!-- # denotes a block and establishes a "context". --}}
+    {{#each conversations}}
+      {{!-- This is current iteration of the array. Do something like this when you have fragments in your url. --}}
+      {{#link-to 'folder.conversation' this tagName='tr'}}
+        <td>{{messages.firstObject.from}}</td>
+        <td>{{messages.firstObject.subject}}</td>
+        <td>{{messages.firstObject.time}}</td>
+      {{/link-to}}
+    {{/each}}
+  </tbody>
+</table>

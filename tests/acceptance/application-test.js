@@ -1,9 +1,10 @@
+// This does setup and tear down for you.
 acceptance('application');
 
 test('displays user name', function() {
   expect(1);
 
-  var yourName = "Erik";
+  var yourName = "Ross";
 
   visit("/");
 

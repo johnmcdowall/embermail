@@ -10,6 +10,6 @@ test('model hook', function() {
 
   ok(model, "Model was returned");
   ok(model && model.user, "`user` key exists in model data");
-  equal(model && model.user && model.user.name, "Erik");
-  equal(model && model.user && model.user.email, "erik@prototypal.io");
+  equal(model && model.user && model.user.name, "Ross");
+  equal(model && model.user && model.user.email, "ross@scienceexchange.com");
 });
